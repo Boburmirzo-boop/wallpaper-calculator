@@ -17,9 +17,9 @@
     <p id="instruction" class="text-gray-600 mb-4">Введите размеры комнаты в метрах:</p>
 
     <div class="space-y-4">
-      <input type="number" id="length" placeholder="Длина комнаты (a)" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
-      <input type="number" id="width" placeholder="Ширина комнаты (b)" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
-      <input type="number" id="height" placeholder="Высота комнаты (c)" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="number" id="length" placeholder="Длина комнаты" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="number" id="width" placeholder="Ширина комнаты" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="number" id="height" placeholder="Высота комнаты" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
 
       <button id="calcBtn" onclick="calculate()" class="w-full bg-indigo-500 text-white py-2 rounded-xl hover:bg-indigo-600 transition">Рассчитать</button>
     </div>
@@ -32,9 +32,9 @@
       ru: {
         title: 'Калькулятор Рулона Обоев',
         instruction: 'Введите размеры комнаты в метрах:',
-        length: 'Длина комнаты (a)',
-        width: 'Ширина комнаты (b)',
-        height: 'Высота комнаты (c)',
+        length: 'Длина комнаты',
+        width: 'Ширина комнаты',
+        height: 'Высота комнаты',
         calcBtn: 'Рассчитать',
         resultText: (area, rolls) => `Площадь: ${area.toFixed(2)} м². Понадобится: ${rolls} рулон(а/ов).`,
         error: 'Введите все размеры'
@@ -42,9 +42,9 @@
       uz: {
         title: "Devor qog'ozi hisoblagich", 
         instruction: 'Xona o‘lchamlarini metrlarda kiriting:',
-        length: 'Xonaning uzunligi (a)',
-        width: 'Xonaning kengligi (b)',
-        height: 'Xonaning balandligi (c)',
+        length: 'Xonaning uzunligi',
+        width: 'Xonaning kengligi',
+        height: 'Xonaning balandligi',
         calcBtn: 'Hisoblash',
         resultText: (area, rolls) => `Maydon: ${area.toFixed(2)} m². Taxminan: ${rolls} rulon kerak bo‘ladi.`,
         error: 'Barcha o‘lchamlarni kiriting'
