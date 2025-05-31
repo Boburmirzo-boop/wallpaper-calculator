@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор Рулона Обоев</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-md text-center">
+    <h1 class="text-2xl font-bold mb-4">Калькулятор Рулона Обоев</h1>
+    <p class="text-gray-600 mb-4">Введите размеры комнаты в метрах:</p>
+
+    <div class="space-y-4">
+      <input type="number" id="length" placeholder="Длина комнаты (a)" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="number" id="width" placeholder="Ширина комнаты (b)" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="number" id="height" placeholder="Высота комнаты (c)" class="w-full p-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+
+      <button onclick="calculate()" class="w-full bg-indigo-500 text-white py-2 rounded-xl hover:bg-indigo-600 transition">Рассчитать</button>
+    </div>
+
+    <div id="result" class="mt-6 text-xl font-semibold text-indigo-700"></div>
+  </div>
+
+  <script>
+    function calculate() {
+      const a = parseFloat(document.getElementById('length').value);
+      const b = parseFloat(document.getElementById('width').value);
+      const c = parseFloat(document.getElementById('height').value);
+
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        document.getElementById('result').innerText = 'Введите все размеры';
+        return;
+      }
+
+      const perimeter = (a + b) * 2;
+      const area = perimeter * c;
+      const rolls = Math.ceil(area / 10);
+
+      document.getElementById('result').innerText = `Площадь: ${area.toFixed(2)} м². Понадобится: ${rolls} рулон(а/ов).`;
+    }
+  </script>
+</body>
+</html>
